@@ -13,7 +13,7 @@ app.use(express.json());
 app.get('/', (req, res) => {res.send('My Week 2 API!')});
 
 app.post('/user', (req, res) => {
-  const { name } = req.body;
+  const {name, email } = req.body;
   if (!name || !req.body.email) {
     return res.status(400).send({ error: 'Missing name or email' });
   }
